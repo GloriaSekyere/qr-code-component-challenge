@@ -3,9 +3,60 @@ $light-gray: hsl(212, 45%, 89%);
 $grayish-blue: hsl(220, 15%, 55%);
 $dark-blue: hsl(218, 44%, 22%);
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: $light-gray;
   font: {
     family: 'Outfit', sans-serif;
     size: 15px;
   }
 }
+
+.card {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 20px;
+  background-color: $white;
+  border-radius: 15px;
+
+  &__image {
+    width: 100%;
+    height: 297px;
+    border-radius: 15px;
+    background: {
+      image: url(../images/image-qr-code.png);
+      size: cover;
+      repeat: no-repeat;
+    }
+  }
+  
+  &__content {
+    margin: 30px 0;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  &__title {
+    color: $dark-blue;
+    margin-bottom: 15px;
+    font: {
+      size: 22px;
+      font-weight: 700;
+    }
+  }
+
+  &__description {
+    color: $grayish-blue;
+  }
+}
+
+
